@@ -2,7 +2,7 @@
 include("includes/header.php");
 
 if($userRole > 1) {
-    header("Location: http://localhost/quizapp/index.php");    
+    header("Location: http://localhost/quizapp/quizhomepage.php");    
     exit();
 }
 

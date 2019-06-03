@@ -6,7 +6,7 @@ if(isset($_POST['subject'])) {
 }
 else
 {
-    header("Location: http://localhost/quizapp/index.php");    
+    header("Location: http://localhost/quizapp/quizhomepage.php");    
     exit();
 }
 
@@ -21,7 +21,7 @@ $check = mysqli_num_rows($userCheck);
 $message = '';
 if($check > 0){
     $message.= 'You cannot take the quiz more than once';
-    header("Location: http://localhost/quizapp/index.php?message='$message'");    
+    header("Location: http://localhost/quizapp/quizhomepage.php?message='$message'");    
     exit();
 }
 

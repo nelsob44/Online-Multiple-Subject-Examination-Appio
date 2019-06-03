@@ -111,7 +111,7 @@ if(isset($_POST['loginButton'])) {
             if($insertUser = mysqli_query($con, $query)) {
                 $_SESSION['email'] = $email;
             
-                header("Location: http://localhost/quizapp/index.php");    
+                header("Location: http://localhost/quizapp/quizhomepage.php");    
                 exit();            
             }
             else
@@ -149,7 +149,7 @@ if(isset($_POST['loginButton'])) {
             if(md5($password) === $hashedPassword) {
                 $_SESSION['email'] = $email;
             
-                header("Location: http://localhost/quizapp/index.php");    
+                header("Location: http://localhost/quizapp/quizhomepage.php");    
                 exit();
             }
                           

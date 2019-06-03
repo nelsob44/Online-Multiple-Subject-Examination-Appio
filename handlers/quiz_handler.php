@@ -62,7 +62,7 @@ if(isset($_POST['submitQuiz'])) {
     }
     else
     {
-        header("Location: http://localhost/quizapp/index.php");
+        header("Location: http://localhost/quizapp/quizhomepage.php");
         exit(); 
     }
      

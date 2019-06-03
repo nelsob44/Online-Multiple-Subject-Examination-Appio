@@ -2,12 +2,12 @@
 include("includes/header.php");
 
 if(!isset($_GET['subject']) && !isset($_POST['subject'])) {
-    header("Location: http://localhost/quizapp/index.php");    
+    header("Location: http://localhost/quizapp/quizhomepage.php");    
     exit();
 }
 
 if($userRole > 1) {
-    header("Location: http://localhost/quizapp/index.php");    
+    header("Location: http://localhost/quizapp/quizhomepage.php");    
     exit();
 }
 
