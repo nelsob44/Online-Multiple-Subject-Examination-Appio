@@ -13,14 +13,15 @@ else
 $query = 
     " SELECT * " .
     " FROM `quiz_record`" .
-    " WHERE `username`='$userLoggedIn'";
+    " WHERE `username`='$userLoggedIn'" .
+    " AND `subject`='$subject'";
 
 $userCheck = mysqli_query($con, $query);
 
 $check = mysqli_num_rows($userCheck);
 $message = '';
 if($check > 0){
-    $message.= 'You cannot take the quiz more than once';
+    $message.= 'You cannot take the quiz on a subject more than once per quiz session.';
     header("Location: http://localhost/quizapp/quizhomepage.php?message='$message'");    
     exit();
 }
