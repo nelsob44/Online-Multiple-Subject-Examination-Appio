@@ -2,6 +2,7 @@
 session_start();
 require '../includes/connection.php';
 
+$message = '';
 
 if(isset($_POST['submitQuiz'])) {
     $answersArray = array();
@@ -52,19 +53,38 @@ if(isset($_POST['submitQuiz'])) {
     $date = date('Y-m-d H:i:s');
 
     $query = 
+    " SELECT * " .
+    " FROM `quiz_record`" .
+    " WHERE `username`='$userLoggedIn'" .
+    " AND `subject`='$subject'";
+
+    $userCheck = mysqli_query($con, $query);
+
+    $check = mysqli_num_rows($userCheck);
+    
+    if($check < 0) {
+        
+        $query = 
         " INSERT INTO `quiz_record`" .
         " VALUES('', '$userLoggedIn', '$userScore', '$date', '$subject')";
 
-    if($answerInsert = mysqli_query($con, $query)) {
+        if($answerInsert = mysqli_query($con, $query)) {
 
-        header("Location: http://localhost/quizapp/check_result.php?subject='$subject'");    
-        exit(); 
+            header("Location: http://localhost/quizapp/check_result.php?subject='$subject'");    
+            exit(); 
+        }
+        else
+        {
+            header("Location: http://localhost/quizapp/quizhomepage.php");
+            exit(); 
+        }
     }
     else
     {
-        header("Location: http://localhost/quizapp/quizhomepage.php");
+        $message.= 'You have taken this quiz before. You cannot take it again'; 
+        header("Location: http://localhost/quizapp/quizhomepage.php?message='$message'");
         exit(); 
-    }
+    }    
      
 }
 else

@@ -1,6 +1,7 @@
 <?php
-require '../includes/connection.php';
 session_start();
+require '../includes/connection.php';
+
 
 $message.= '';
 
@@ -38,7 +39,7 @@ if(isset($_POST['loginButton'])) {
             header("Location: http://localhost/quizapp/login.php?message='$message'");    
             exit();           
         }
-        if(strlen($password > 30 || strlen($password) < 5)) {
+        if(strlen($password) > 30 || strlen($password) < 5) {
             $message.= 'Your Passwords must be between 5 and 30 characters long';
             header("Location: http://localhost/quizapp/login.php?message='$message'");    
             exit();            
