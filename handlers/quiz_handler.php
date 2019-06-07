@@ -62,7 +62,7 @@ if(isset($_POST['submitQuiz'])) {
 
     $check = mysqli_num_rows($userCheck);
     
-    if($check < 0) {
+    if($check < 1) {
         
         $query = 
         " INSERT INTO `quiz_record`" .
