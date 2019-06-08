@@ -3,7 +3,7 @@ session_start();
 require '../includes/connection.php';
 
 
-$message.= '';
+$message = '';
 
 if(isset($_POST['loginButton'])) {
 
@@ -152,6 +152,12 @@ if(isset($_POST['loginButton'])) {
             
                 header("Location: http://localhost/quizapp/quizhomepage.php");    
                 exit();
+            }
+            else
+            {
+                $message.= 'The email/password combination is incorrect.'; 
+                header("Location: http://localhost/quizapp/login.php?message='$message'");    
+                exit();  
             }
                           
         }
