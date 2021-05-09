@@ -58,6 +58,8 @@ else {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/quizapp/delete_subject.php">Delete Questions</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="http://localhost/quizapp/edit_subject.php">Edit Questions</a>
                     </li> <?php  
                 }
             ?>                  

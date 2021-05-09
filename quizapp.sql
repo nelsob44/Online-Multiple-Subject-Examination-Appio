@@ -6,8 +6,8 @@ CREATE TABLE users (
     password varchar(255),
     username varchar(50),
     profilepic varchar(255),
-    last_login timestamp,
-    registration_time timestamp,
+    last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    registration_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_role int(1),
     PRIMARY KEY (id)
 );

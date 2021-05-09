@@ -1,3 +1,8 @@
+function checkValidity() {
+    alert('Clicked here');
+}
+
+
 function toggleSignup() {
     if($('#loginButton').val() == 0) {
         $('#firstnameDiv').show();
@@ -16,5 +21,11 @@ function toggleSignup() {
         $('#loginButton').html('Log In');
         $('#toggleMessage').html('<a href="#">If you don\'t already have an account, click here to sign up</a>');
     }
+}
+
+
+function isValidProductCode(product_code) {
+    
+
 }
 

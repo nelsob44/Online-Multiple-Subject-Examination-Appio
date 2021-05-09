@@ -83,7 +83,7 @@ if(isset($_GET['message'])) {
                 <div class="col-sm-10">
                     <p id="toggleMessage"><a href="#" id="toggleMessageTag" style="text-align: center; font-size: 1.2rem; color: black;"><b>If you don't already have an account, click here to sign up<b></a></p>      
                 </div>
-            </div>
+            </div>           
         </form>
     </div>
     <!-- Optional JavaScript -->
