@@ -35,7 +35,7 @@ $subjectOptions = array(
                 <input type="hidden" name="userLoggedIn" value="<?php echo $userLoggedIn; ?>">
                 <input type="hidden" name="userRole" value="<?php echo $userRole; ?>">
                 <div class="form-group row">
-                    <label for="subjects" class="col-sm-2 col-form-label">Choose subject to delete</label>
+                    <label for="subjects" class="col-sm-2 col-form-label">Choose subject to edit</label>
                     <div class="col-sm-10">
                         <select type="select" class="form-control" id="subject" name="subject">
                             <?php

@@ -3,14 +3,13 @@ session_start();
 require '../includes/connection.php';
 
 $message = '';
-$check = array();
 
 if(isset($_POST['submitEditQuiz'])) {
     $answersArray = array();
     $correctAnswersArray = array();
     $userLoggedIn = $_POST['userLoggedIn'];
     $subject = $_POST['subject'];
-    
+
     foreach($_POST as $key => $value) {
         if(strpos($key, 'question_answer_') !== false){
             $questionArray = explode('question_answer_', $key);
